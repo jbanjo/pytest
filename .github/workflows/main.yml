@@ -30,4 +30,5 @@ jobs:
 
           - name: Run tests
             run: |
-                python -m pytest test_sample.py
+                python -m pytest test_sample_success.py
+                python -m pytest test_sample_failure.py
