@@ -2,7 +2,7 @@ name: Simple Pytest
 
 on: 
     push:
-        branches: [main]
+        branches: [main, test/**]
     pull_request:
 
 jobs:
@@ -30,4 +30,4 @@ jobs:
 
           - name: Run tests
             run: |
-                python -m pytest test_sample.py
+                python -m pytest tests/
