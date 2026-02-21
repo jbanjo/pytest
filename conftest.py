@@ -3,7 +3,7 @@ import shutil
 import pytest
 import os
 
-repoRootDirectory = Path(__file__).resolve().parent.parent
+repoRootDirectory = Path(__file__).resolve().parent
 testingDirectory = repoRootDirectory / "notebooks/outputs"
 comparisonDirectory = repoRootDirectory / "tests/comparison_outputs"
 
@@ -13,7 +13,7 @@ def pytest_sessionstart(session):
     before performing collection and entering the run test loop.
     """
     testingDirectory.mkdir(exist_ok=True)
-    print("testingDirectory")
+    print(">>> CONFTEST.PY IS RUNNING BEFORE NBVAL")
 
 def pytest_sessionfinish(session, exitstatus):
     """
