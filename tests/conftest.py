@@ -3,7 +3,7 @@ import shutil
 import pytest
 import os
 
-repoRootDirectory = Path(os.getcwd()).resolve().parent
+repoRootDirectory = Path(__file__).resolve().parent
 testingDirectory = repoRootDirectory / "notebooks/outputs"
 comparisonDirectory = repoRootDirectory / "tests/comparison_outputs"
 
