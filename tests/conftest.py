@@ -13,6 +13,7 @@ def pytest_sessionstart(session):
     before performing collection and entering the run test loop.
     """
     testingDirectory.mkdir(exist_ok=True)
+    print("testingDirectory")
 
 def pytest_sessionfinish(session, exitstatus):
     """
