@@ -30,5 +30,6 @@ jobs:
 
           - name: Run tests
             run: |
+                python -m pytest tests/conftest.py
                 python -m pytest --nbval notebooks/
                 python -m pytest tests/
