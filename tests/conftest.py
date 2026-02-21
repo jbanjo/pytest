@@ -1,9 +1,11 @@
 from pathlib import Path
 import shutil
 import pytest
+import os
 
-testingDirectory = Path("../notebooks/outputs")
-comparisonDirectory = Path("comparions_outputs")
+repoRootDirectory = Path(os.getcwd()).resolve().parent
+testingDirectory = repoRootDirectory / "notebooks/outputs"
+comparisonDirectory = repoRootDirectory / "tests/comparison_outputs"
 
 def pytest_sessionstart(session):
     """
